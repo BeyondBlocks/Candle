@@ -1,0 +1,23 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: byquanton <32410361+byquanton@users.noreply.github.com>
+Date: Tue, 25 Apr 2023 00:49:31 +0200
+Subject: [PATCH] Dont close Slime Plugin Classloader
+
+
+diff --git a/src/main/java/org/bukkit/plugin/java/PluginClassLoader.java b/src/main/java/org/bukkit/plugin/java/PluginClassLoader.java
+index 7572a0bf6614b02be3cbccc7b86e52ee1b8df621..ca03111af3afb24395f0cb6976f4419e5f959b89 100644
+--- a/src/main/java/org/bukkit/plugin/java/PluginClassLoader.java
++++ b/src/main/java/org/bukkit/plugin/java/PluginClassLoader.java
+@@ -255,8 +255,10 @@ public final class PluginClassLoader extends URLClassLoader implements io.paperm
+             // Paper end
+             super.close();
+         } finally {
+-            this.closed = true; // Pufferfish
+-            jar.close();
++            if (!this.plugin.getPluginMeta().getProvidedPlugins().contains("SlimeWorldManager")) {
++                this.closed = true; // Pufferfish
++                jar.close();
++            }
+         }
+     }
+ 
