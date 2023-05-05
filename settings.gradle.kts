@@ -7,4 +7,4 @@ pluginManagement {
 
 rootProject.name = "candle"
 
-include("candle-api", "candle-server")
+include("candle-api", "candle-server", "asp-api", "asp-core")

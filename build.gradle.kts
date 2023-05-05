@@ -52,6 +52,9 @@ subprojects {
     repositories {
         mavenCentral()
         maven(paperMavenPublicUrl)
+        maven("https://repo.codemc.io/repository/nms/") // Required for AdvancedSlimePaper
+        maven("https://repo.rapture.pw/repository/maven-releases/") // Required for AdvancedSlimePaper
+        maven("https://repo.glaremasters.me/repository/concuncan/") // Required for AdvancedSlimePaper
         maven("https://jitpack.io") // Required for Pufferfish (Simple-YAML)
     }
 }
