@@ -5,18 +5,26 @@ Subject: [PATCH] Slime World Manager
 
 
 diff --git a/build.gradle.kts b/build.gradle.kts
-index 597d403a3866cfee58d8296a889661aa151b00e4..0c30add1b34fbbe9158572350e7864ce5de1c85f 100644
+index 597d403a3866cfee58d8296a889661aa151b00e4..beca42804946f81dce511936ef2c3cb0e19d0f52 100644
 --- a/build.gradle.kts
 +++ b/build.gradle.kts
-@@ -8,6 +8,8 @@ plugins {
+@@ -8,7 +8,15 @@ plugins {
  
  dependencies {
      implementation(project(":candle-api")) // Purpur // Candle
-+    implementation(project(":asp-api")) // ASWM // Candle
-+    implementation(project(":asp-core")) // ASWM // Candle
-     implementation("io.papermc.paper:paper-mojangapi:1.19.4-R0.1-SNAPSHOT") // Purpur
+-    implementation("io.papermc.paper:paper-mojangapi:1.19.4-R0.1-SNAPSHOT") // Purpur
++
++    // Candle Start
++    implementation(project(":asp-api"))
++    implementation(project(":asp-core"))
++    implementation("io.papermc.paper:paper-mojangapi:1.19.4-R0.1-SNAPSHOT"){
++        exclude("io.papermc.paper", "paper-api")
++    }
++    // Candle End
++
      // Paper start
      implementation("org.jline:jline-terminal-jansi:3.21.0")
+     implementation("net.minecrell:terminalconsoleappender:1.3.0")
 diff --git a/src/main/java/com/infernalsuite/aswm/Converter.java b/src/main/java/com/infernalsuite/aswm/Converter.java
 new file mode 100644
 index 0000000000000000000000000000000000000000..67d17c9ddaa835026e5ee19657ed1b8898d3651e

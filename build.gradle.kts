@@ -1,5 +1,3 @@
-import io.papermc.paperweight.patcher.upstream.RepoPatcherUpstream
-
 plugins {
     java
     `maven-publish`
@@ -81,9 +79,6 @@ paperweight {
     }
 }
 
-//
-// Everything below here is optional if you don't care about publishing API or dev bundles to your repository
-//
 
 tasks.generateDevelopmentBundle {
     apiCoordinates.set("de.beyondblocks.candle:candle-api")
@@ -92,7 +87,7 @@ tasks.generateDevelopmentBundle {
         listOf(
             "https://repo.maven.apache.org/maven2/",
             paperMavenPublicUrl,
-            // "https://my.repo/", // This should be a repo hosting your API (in this example, 'com.example.paperfork:forktest-api')
+            "https://repo.byquanton.eu/candle"
         )
     )
 }
