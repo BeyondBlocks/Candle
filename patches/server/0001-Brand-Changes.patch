@@ -77,10 +77,10 @@ index beb05039926e1fb7a656dfcd0c503f82db67fc46..156c8e073b5763988f6bcea0e847632b
                  this.getRunningThread().stop();
                  try {
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftServer.java b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
-index 861afc3e8fed9884d4efb0b9548cfc2df9c27adc..46bd86bf09664c4f023afa79f142f60c02191c41 100644
+index e5bac6bc792196226f975e7f3dd8f147fb14dbad..130f1f848faad0dff0daaa0a51f9831ed2757dc4 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftServer.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
-@@ -256,7 +256,7 @@ import javax.annotation.Nullable; // Paper
+@@ -257,7 +257,7 @@ import javax.annotation.Nullable; // Paper
  import javax.annotation.Nonnull; // Paper
  
  public final class CraftServer implements Server {
@@ -103,7 +103,7 @@ index 99597258e8e88cd9e2c901c4ac3ff7faeeabee2b..6c619807c312d3fa5e4e646523dadb8c
  
          if (stream != null) {
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurConfig.java b/src/main/java/org/purpurmc/purpur/PurpurConfig.java
-index 0bcbe1f07ff8e552d2abd6e432af5710005acc04..7c077458fd9595562f78eb5f5408a33f961a439f 100644
+index 62ad4c6ad417e11e9152f74636b2ff0d187d0799..72c3a915fcf6ba39df534278255f2adba6ac7e36 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurConfig.java
 @@ -227,7 +227,7 @@ public class PurpurConfig {
